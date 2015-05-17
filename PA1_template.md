@@ -1,4 +1,10 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: 'Reproducible Research: Peer Assessment 1'
+output:
+  pdf_document: default
+  html_document:
+    keep_md: yes
+---
 
 
 
@@ -51,7 +57,7 @@ text_x = steps_mean; text_y = 10
 text(text_x, text_y, paste("Mean:",as.integer(steps_mean)), pos=2) 
 ```
 
-<img src="PA1_template_files/figure-html/chunk3-plot1-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="figure/chunk3-plot1-1.png" title="plot of chunk chunk3-plot1" alt="plot of chunk chunk3-plot1" style="display: block; margin: auto;" />
 
 
 
@@ -77,7 +83,7 @@ plot(x=avgs_interval$interval,y=avgs_interval$steps,type="l",
 abline(h=max_average_steps_interval,col="red")
 ```
 
-<img src="PA1_template_files/figure-html/chunk5-plot2-1.png" title="" alt="" style="display: block; margin: auto;" />
+<img src="figure/chunk5-plot2-1.png" title="plot of chunk chunk5-plot2" alt="plot of chunk chunk5-plot2" style="display: block; margin: auto;" />
 
 
 ## Imputing missing values
@@ -150,7 +156,7 @@ rug(steps_count$steps)
 abline(v = steps_mean, col = "blue", lwd = 2)
 ```
 
-![](PA1_template_files/figure-html/chunk7-plot3-1.png) 
+![plot of chunk chunk7-plot3](figure/chunk7-plot3-1.png) 
 
 The new mean is 10766 and median is 10766. 
 
@@ -180,7 +186,7 @@ xyplot( steps ~ interval | wk, data=nw_data,type="l",layout=c(2,1),
         main="Average Number of Steps Walked by Interval and Day Type")
 ```
 
-![](PA1_template_files/figure-html/chunk8-plot4-1.png) 
+![plot of chunk chunk8-plot4](figure/chunk8-plot4-1.png) 
 
 So it looks like our person of interest is more active on the **average** weekend rather than the **average** weekday. By how much? Let's look!
 
